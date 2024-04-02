@@ -7,13 +7,13 @@ echo -n "ingrese el segundo numero: "
 read num2
 
 if [ $num1 -gt $num2 ]; then
-    let porc1=$((($num1*20)/100 ))
-    let porc2=$((($num2*30)/100))
+    porc1=$(echo "scale=2; ($num1*20)/100" | bc)
+    porc2=$(echo "scale=2; ($num2*30)/100" | bc)
     echo "El 20% de $num1 numero es: $porc1"
     echo "El 30% de $num2 numero es: $porc2"
 else
-    let porc1=$((($num2*20)/100 ))
-    let porc2=$((($num1*30)/100))
+    porc1=$(echo "scale=2; ($num2*20)/100" | bc)
+    porc2=$(echo "scale=2; ($num1*30)/100" | bc)
     echo "El 20% de $num2 es: $porc1"
     echo "El 30% de $num1 numero es: $porc2"
 fi
