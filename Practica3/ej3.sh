@@ -2,9 +2,9 @@
 for ((i=0; i<15; i++)) do
     read -p "Por favor ingrese un numero: " num
     if (( $num % 2 == 0 )); then
-        pares+="$num"
+        pares+=($num)
     else
-        impares+="$num "
+        impares+=($num)
     fi
 
 done
