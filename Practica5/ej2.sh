@@ -1,4 +1,5 @@
 #!/bin/bash
+#Realizo las funciones de buscar minimo y buscar maximo que son similares
 buscarMin(){
     numMin=${numeros[0]}
     for ((i=1;i<${#numeros[@]};i++)); do
@@ -17,6 +18,7 @@ buscarMax(){
     done
     echo "El numero mas grande es $numMax"
 }
+#Realizo la funcion contarNum para contar la cantidad de veces que se encuentra el numero seleccionado
 contarNum(){
     contador=0
     read -p "Ingrese el numero a ser contado: " num
@@ -27,6 +29,7 @@ contarNum(){
     done
     echo $contador
 }
+#Funcion Cargar retorna el array de numeros cargados por el usuario
 cargar(){
     read -p "Por favor ingrese un numero. Para terminar ingrese una letra: " num
     while [[ $num != [^0-9] ]]; do
