@@ -8,10 +8,10 @@ idProceso(){
     ps | awk '/\.sh/ { print $1 }'
 }
 nomUsuarioActual(){
-
+    whoami
 }
 numProcSeg(){
-
+    jobs | awk '/\.sh/ { print $1 }'
 }
 numLineaAct(){
 
