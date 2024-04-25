@@ -1,11 +1,11 @@
 nombreScript(){
-
+    ps | awk '/\.sh/ { print $4 }'
 }
 ultimoComando(){
-
+    history | tail -1   
 }
 idProceso(){
-
+    ps | awk '/\.sh/ { print $1 }'
 }
 nomUsuarioActual(){
 
